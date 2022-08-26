@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bipeensinhaazuredevopskubernetes 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bipeensinhaazuredevopskubernetes
+  template:
+    metadata:
+      labels:
+        app: bipeensinhaazuredevopskubernetes 
+    spec:
+      containers:
+        - name: bipeensinhaazuredevopskubernetes 
+          image: mycontainerclksegistryy.azurecr.io/bipeensinhaazuredevopskubernetes
+          ports:
+          - containerPort: 8080
